@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+:root {
+    --primaryColor: rgb(245, 99, 99);
+    --turnColor: rgb(92, 248, 53);
+}
+
+button {
+    background-color: white;
+    border: 3px solid var(--primaryColor);
+    color: var(--primaryColor);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+p {
+    margin-block: 0;
+}
+
+.activeTurn {
+    border-color: var(--turnColor) !important;
+    border-radius: 25px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+    margin-bottom: 20px;
+}
+
+.score-board #score-player,
+.score-board #score-npc {
+    border: 3px solid black;
+    background-color: white;
+}
+
+.score-board>* {
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    width: 150px;
+    font-size: larger;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.gameboard {
+    padding: 7px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 600px;
+}
+
+.gameboard .gameboard-card {
+    border: 3px solid black;
+    background-color: white;
+    width: 31%;
+    height: 31%;
+}
+
+.gameboard .gameboard-card:hover {
+    cursor: pointer;
+    border: 3px solid var(--turnColor);
+}
+
+.gameboard-card .gameboard-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 5em;
+}
+
+#winnerText {
+    font-size: 3em;
+}
+
+.rainbowAnimation {
+    animation: colorRotate 2s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+    from {
+        color: red;
+    }
+
+    28.56% {
+        color: orange;
+    }
+
+    42.82% {
+        color: yellow;
+    }
+
+    57.12% {
+        color: greenyellow;
+    }
+
+    71.4% {
+        color: lightseagreen;
+    }
+
+    85.68% {
+        color: indigo
+    }
+
+    99.96% {
+        color: violet;
+    }
+}
